@@ -10,7 +10,7 @@ Scripts and data for a causal inference approach to returning production in coll
 * [2016](https://www.sbnation.com/college-football/2016/8/25/12638526/2016-ncaa-football-returning-starters-experience-lsu-louisville-ohio-state)
 * [2015](https://www.footballstudyhall.com/2015/9/4/9254347/a-better-way-to-measure-returning-experience_ga=2.91425370.1909192888.1588967835-128753619.1578413763)
 
-## Game, Play, and Drive level stats are pulled from [College Football Data](https://collegefootballdata.com/) using [cfbscrapR](https://github.com/meysubb/cfbscrapR).
+## Data from [College Football Data](https://collegefootballdata.com/) using [cfbscrapR](https://github.com/meysubb/cfbscrapR).
 
 ### All regular season-games 2014-2019.
 
