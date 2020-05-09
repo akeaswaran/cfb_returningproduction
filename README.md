@@ -14,12 +14,12 @@ Scripts and data for a causal inference approach to returning production in coll
 
 ### All regular season-games 2014-2019.
 
-### Game Stats
+### Game Stats (seasonpoints.RDS)
 * Points For
 * Points Against
 * Point Differential
 
-### Drive Stats
+### Drive Stats (drivestats.RDS)
 
 * Points Per Drive
 * PPD Margin
@@ -28,7 +28,7 @@ Scripts and data for a causal inference approach to returning production in coll
 * Drive Touchdown Rate
 * Drive TD Rate Margin
 
-### Play-by-Play Stats
+### Play-by-Play Stats (playstats.RDS)
 
 * Expected Points Added Per Play
 * EPA Margin
