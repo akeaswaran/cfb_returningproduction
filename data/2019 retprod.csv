@@ -1,0 +1,131 @@
+﻿team,offense,defense,overall
+Wyoming,0.52,0.46,0.49
+Wisconsin,0.85,0.6,0.73
+Western Michigan,0.84,0.85,0.85
+Western Kentucky,0.81,0.72,0.76
+West Virginia,0.42,0.67,0.54
+Washington State,0.58,0.64,0.61
+Washington,0.67,0.34,0.5
+Wake Forest,0.55,0.72,0.63
+Virginia Tech,0.6,0.96,0.78
+Virginia,0.56,0.72,0.64
+Vanderbilt,0.72,0.43,0.58
+UT San Antonio,0.66,0.51,0.59
+UTEP,0.58,0.35,0.46
+Utah State,0.46,0.63,0.54
+Utah,0.9,0.59,0.75
+USC,0.79,0.43,0.61
+UNLV,0.8,0.56,0.68
+Louisiana Monroe,0.61,0.7,0.66
+Louisiana,0.63,0.66,0.65
+UCLA,0.61,0.81,0.71
+UAB,0.33,0.39,0.36
+Tulsa,0.71,0.79,0.75
+Tulane,0.5,0.63,0.56
+Troy,0.59,0.76,0.67
+Toledo,0.5,0.57,0.54
+Texas Tech,0.59,0.63,0.61
+Texas State,0.8,0.85,0.83
+Texas A&M,0.62,0.49,0.55
+Texas,0.57,0.4,0.48
+Tennessee,0.91,0.76,0.83
+Temple,0.64,0.61,0.63
+TCU,0.73,0.47,0.6
+Syracuse,0.55,0.71,0.63
+Stanford,0.45,0.63,0.54
+Southern Mississippi,0.94,0.71,0.82
+South Florida,0.83,0.55,0.69
+South Carolina,0.68,0.64,0.66
+South Alabama,0.44,0.51,0.47
+SMU,0.68,0.79,0.73
+San Jose State,0.63,0.62,0.62
+San Diego State,0.66,0.69,0.67
+Rutgers,0.75,0.44,0.6
+Rice,0.76,0.85,0.81
+Purdue,0.37,0.72,0.54
+Pittsburgh,0.64,0.64,0.64
+Penn State,0.44,0.68,0.56
+Oregon State,0.62,0.86,0.74
+Oregon,0.73,0.71,0.72
+Ole Miss,0.3,0.71,0.51
+Old Dominion,0.45,0.62,0.53
+Oklahoma State,0.56,0.68,0.62
+Oklahoma,0.46,0.81,0.64
+Ohio State,0.42,0.85,0.63
+Ohio,0.41,0.63,0.52
+Notre Dame,0.57,0.55,0.56
+Northwestern,0.53,0.71,0.62
+Northern Illinois,0.64,0.75,0.7
+North Texas,0.79,0.48,0.63
+North Carolina,0.81,0.61,0.71
+New Mexico State,0.79,0.48,0.64
+New Mexico,0.59,0.43,0.51
+Nevada,0.71,0.54,0.63
+Nebraska,0.59,0.55,0.57
+NC State,0.32,0.74,0.53
+Navy,0.47,0.41,0.44
+Missouri,0.54,0.67,0.61
+Mississippi State,0.59,0.56,0.57
+Minnesota,0.9,0.66,0.78
+Middle Tennessee,0.45,0.51,0.48
+Michigan State,0.78,0.53,0.66
+Michigan,0.76,0.5,0.63
+Miami (OH),0.57,0.57,0.57
+Miami,0.63,0.57,0.6
+Memphis,0.79,0.82,0.8
+UMass ,0.4,0.45,0.43
+Maryland,0.69,0.56,0.62
+Marshall,0.63,0.5,0.57
+LSU,0.82,0.7,0.76
+Louisville,0.69,0.79,0.74
+Louisiana Tech,0.76,0.68,0.72
+Liberty,0.79,0.68,0.74
+Kentucky,0.64,0.39,0.51
+Kent State,0.86,0.73,0.79
+Kansas State,0.69,0.75,0.72
+Kansas,0.49,0.56,0.52
+Iowa State,0.53,0.68,0.61
+Iowa,0.72,0.57,0.65
+Indiana,0.78,0.77,0.77
+Illinois,0.7,0.81,0.75
+Houston,0.82,0.39,0.61
+Hawai'i,0.73,0.84,0.79
+Georgia Tech,0.44,0.55,0.49
+Georgia State,0.73,0.73,0.73
+Georgia Southern,0.76,0.74,0.75
+Georgia,0.53,0.72,0.62
+Fresno State,0.34,0.41,0.38
+Florida State,0.74,0.8,0.77
+Florida International,0.85,0.76,0.8
+Florida Atlantic,0.57,0.56,0.57
+Florida,0.77,0.71,0.74
+Eastern Michigan,0.53,0.49,0.51
+East Carolina,0.65,0.56,0.6
+Duke,0.37,0.71,0.54
+Connecticut,0.36,0.91,0.63
+Colorado State,0.36,0.55,0.45
+Colorado,0.71,0.64,0.67
+Coastal Carolina,0.63,0.73,0.68
+Clemson,0.77,0.52,0.64
+Cincinnati,0.71,0.71,0.71
+Charlotte,0.6,0.69,0.65
+Central Michigan,0.83,0.4,0.62
+UCF,0.54,0.63,0.58
+California,0.51,0.78,0.64
+BYU,0.69,0.57,0.63
+Buffalo,0.4,0.46,0.43
+Bowling Green,0.71,0.42,0.56
+Boston College,0.69,0.38,0.53
+Boise State,0.4,0.77,0.59
+Baylor,0.65,0.85,0.75
+Ball State,0.66,0.84,0.75
+Auburn,0.54,0.67,0.6
+Army,0.8,0.51,0.66
+Arkansas State,0.53,0.75,0.64
+Arkansas,0.64,0.6,0.62
+Arizona State,0.52,0.81,0.66
+Arizona,0.61,0.82,0.71
+Appalachian State,0.87,0.61,0.74
+Alabama,0.67,0.59,0.63
+Akron,0.67,0.44,0.55
+Air Force,0.62,0.62,0.62
