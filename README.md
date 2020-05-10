@@ -37,3 +37,10 @@ Scripts and data for a causal inference approach to returning production in coll
 * YPP Margin
 * YPP Success Rate
 
+## Team Data (teams.RDS)
+
+* Wins and Losses
+* Win Percentage
+* Head Coaches
+* Recruiting Rankings
+
