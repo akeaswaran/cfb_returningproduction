@@ -39,7 +39,7 @@ Army,0.66,0.74,0.7
 New Mexico State,0.57,0.83,0.7
 Florida State,0.6,0.8,0.7
 Oregon State,0.77,0.63,0.7
-Middle Tennessee State,0.81,0.59,0.7
+Middle Tennessee,0.81,0.59,0.7
 Boston College,0.67,0.72,0.69
 Washington State,0.67,0.72,0.69
 Memphis,0.87,0.51,0.69
@@ -66,7 +66,7 @@ Arkansas State,0.78,0.5,0.64
 UTEP,0.57,0.71,0.64
 Georgia State,0.65,0.62,0.64
 Marshall,0.5,0.76,0.63
-San Jose State,0.51,0.76,0.63
+San José State,0.51,0.76,0.63
 Ball State,0.65,0.62,0.63
 Washington,0.75,0.5,0.63
 USC,0.58,0.67,0.63
@@ -90,7 +90,7 @@ Connecticut,0.6,0.53,0.57
 Akron,0.63,0.51,0.57
 Arkansas,0.55,0.58,0.57
 Minnesota,0.45,0.68,0.57
-Viginia Tech,0.34,0.79,0.56
+Virginia Tech,0.34,0.79,0.56
 Baylor,0.45,0.67,0.56
 Northern Illinois,0.38,0.74,0.56
 Boise State,0.6,0.5,0.55
@@ -111,7 +111,7 @@ Tennessee,0.42,0.61,0.51
 Ole Miss,0.37,0.63,0.5
 LSU,0.59,0.4,0.5
 Idaho,0.56,0.43,0.5
-ECU,0.37,0.61,0.49
+East Carolina,0.37,0.61,0.49
 New Mexico,0.66,0.33,0.49
 Utah,0.59,0.37,0.48
 Coastal Carolina,0.55,0.41,0.48
