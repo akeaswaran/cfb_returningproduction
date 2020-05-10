@@ -5,7 +5,7 @@ easypackages::libraries("tidyverse", "ggplot2", "ggimage", "cfbscrapR")
 
 ## POINTS PER GAME, POINTS ALLOWED, POINTS SCORED
 # Define function to pull game info and create points for and points against
-      ## Note: 2019 Air Force vs New Mexico got rescheduled, so data is null. Filter out game ID "401117539".
+      ### Note: 2019 Air Force vs New Mexico got rescheduled, so data is null. Filter out game ID "401117539".
 
 points.for <- function(year){
   data <- cfb_game_info(year) %>% filter(id != 401117539)
@@ -41,44 +41,8 @@ for(i in 2014:2019){
 season.points <- off %>% left_join(def, by = c("home_team", "year")) %>% filter(!is.na(points.for)) %>% 
   select(team = home_team, year, points.for, points.against) %>% mutate(point.diff = points.for - points.against)
 
-## Per Drive Stats
+saveRDS(season.points, "seasonpoints.RDS")
 
-# Get drive data
-drive_level <- data.frame()
-for(i in 2014:2019){
-  dat <- cfb_pbp_data(year = i, week = NULL, epa_wpa = TRUE, drive = TRUE) %>% mutate(year = i)
-  drive_level <- bind_rows(drive_level, dat)
-}
-
-# Calculate Points Per Drive and success rates, then merge and calculate margins.
-drives <- drive_level %>% 
-  mutate(
-  drive.pts = case_when(drive_result == "TD" ~ 6, 
-                        drive_result == "FG" ~ 3,
-                        drive_result == "INT TD" ~ -6,
-                        drive_result == "FUMBLE TD" ~ -6,
-                        drive_result == "FUMBLE RETURN TD" ~ -6,
-                        TRUE ~ 0),
-  drive.success = ifelse(drive_result %in% c("TD", "FG"), 1, 0),
-  drive.success.td = ifelse(drive_result == "TD", 1, 0))
-
-off.drive.stats <- drives %>% group_by(offense, year) %>% 
-  summarise(ppd.off = mean(drive.pts),
-            success.rte.off = mean(drive.success),
-            td.rte.off = mean(drive.success.td))
-
-def.drive.stats <- drives %>% group_by(defense, year) %>% 
-  summarise(ppd.def = mean(drive.pts),
-            success.rte.def = mean(drive.success),
-            td.rte.def = mean(drive.success.td))
-
-drive.stats <- left_join(off.drive.stats, def.drive.stats, by = c("offense" = "defense", "year")) %>% 
-  mutate(ppd.margin = ppd.off-ppd.def,
-         success.rte.margin = success.rte.off - success.rte.def,
-         td.rte.margin = td.rte.off - td.rte.def) %>%
-  select(team = offense, year, ppd.off, ppd.def, ppd.margin, success.rte.off, success.rte.def, success.rte.margin,
-         td.rte.off, td.rte.def, td.rte.margin)
-         
 ## Per Play Stats
 
 # Get play-by-play data 
@@ -126,10 +90,71 @@ play.stats <- left_join(off.play.stats, def.play.stats, by = c("offense_play" = 
   select(team = offense_play, year, epa.off, epa.def, epa.margin, ypp.off, ypp.def, ypp.margin, 
          success.rte.off, success.rte.def, sr.margin, epa.success.rte.off, epa.success.rte.def, epa.sr.margin)
 
+saveRDS(play.stats, "playstats.RDS")
+## Per Drive Stats
+
+# Get drive data
+drive_level <- data.frame()
+for(i in 2014:2019){
+  dat <- cfb_pbp_data(year = i, week = NULL, epa_wpa = TRUE, drive = TRUE) %>% mutate(year = i)
+  drive_level <- bind_rows(drive_level, dat)
+}
+
+# Calculate Points Per Drive and success rates, then merge and calculate margins.
+drives <- drive_level %>% 
+  mutate(
+  drive.pts = case_when(drive_result == "TD" ~ 6, 
+                        drive_result == "FG" ~ 3,
+                        drive_result == "INT TD" ~ -6,
+                        drive_result == "FUMBLE TD" ~ -6,
+                        drive_result == "FUMBLE RETURN TD" ~ -6,
+                        TRUE ~ 0),
+  drive.success = ifelse(drive_result %in% c("TD", "FG"), 1, 0),
+  drive.success.td = ifelse(drive_result == "TD", 1, 0))
+
+off.drive.stats <- drives %>% group_by(offense, year) %>% 
+  summarise(ppd.off = mean(drive.pts),
+            success.rte.off = mean(drive.success),
+            td.rte.off = mean(drive.success.td))
+
+def.drive.stats <- drives %>% group_by(defense, year) %>% 
+  summarise(ppd.def = mean(drive.pts),
+            success.rte.def = mean(drive.success),
+            td.rte.def = mean(drive.success.td))
+
+drive.stats <- left_join(off.drive.stats, def.drive.stats, by = c("offense" = "defense", "year")) %>% 
+  mutate(ppd.margin = ppd.off-ppd.def,
+         success.rte.margin = success.rte.off - success.rte.def,
+         td.rte.margin = td.rte.off - td.rte.def) %>%
+  select(team = offense, year, ppd.off, ppd.def, ppd.margin, success.rte.off, success.rte.def, success.rte.margin,
+         td.rte.off, td.rte.def, td.rte.margin)
+
+saveRDS(drive.stats, "drivestats.RDS")
 
 
+## Team Data
+
+#Recruiting 
+
+recruits <- data.frame()
+for(i in 2014:2020){
+  dat <- cfb_recruiting(year = i)
+  recruits <- bind_rows(recruits, dat)
+}
+
+team.recruiting <- recruits %>% group_by(committedTo, year) %>% rename(team = committedTo) %>%
+  summarise(stars = mean(stars), total.stars = sum(stars), rating = mean(rating), total.rating = sum(rating))
 
 
+# import coaching data and create win percentage
+coaches <- 
+  read_csv("https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/data/coaches.csv") %>%
+  mutate(win.pct = wins/games)
+
+# merge recruiting and coaching stats, remove FCS
+team.stats <- team.recruiting %>% 
+  left_join(coaches, by = c("team" = "school", "year")) %>%
+  filter(!is.na(games))
 
 
                                    
