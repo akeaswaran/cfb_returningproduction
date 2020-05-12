@@ -3,17 +3,17 @@
 ## Initial Data Exploration:
 Running "explore.R" and generating some summary statistics, as well as some simple correlations and scatterplots. 
 
-# Summary: Returning Production in the Playoff Era:
+### Summary: Returning Production in the Playoff Era:
 ![avg](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/rp_summary.png)
 
 
-## Offensive Production and On-Field Performance, Visualized: 
+### Offensive Production and On-Field Performance, Visualized: 
 
-# EPA:
+### EPA:
 ![epa](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/offense_rp_epa.png)
 
-# YPP:
+### YPP:
 ![ypp](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/offense_rp_ypp.png)
 
-# Success Rate:
+### Success Rate:
 ![success](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/offense_rp_success.png)
