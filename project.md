@@ -4,7 +4,9 @@
 Running "explore.R" and generating some summary statistics, as well as some simple correlations and scatterplots. 
 
 ### Summary: Returning Production in the Playoff Era
-![avg](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/rp_summary.png | width = "500")
+<p align = "center">
+<img (https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/rp_summary.png  width = "500" />
+</p>
 
 <p align = "center">
   <img src="https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/rp_topten.png" width = "400" />
