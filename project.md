@@ -6,6 +6,7 @@ Running "explore.R" and generating some summary statistics, as well as some simp
 ### Summary: Returning Production in the Playoff Era
 ![avg](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/rp_summary.png)
 
+![top10](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/rp_topten.png)  |  ![btm10](https://raw.githubusercontent.com/spfleming/cfb_returningproduction/master/graphs/rp_btmten.png)
 
 ## Offensive Production and On-Field Performance, Visualized
 
